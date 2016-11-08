@@ -27,20 +27,20 @@ Inf *in=NULL;
 int setKurs() {
     Kurs *a = NULL, *b = NULL;
     char kursName[25];
-    printf("%Ââåäèòå íàçâàíèå êóğñîâîé ");
+    printf("%Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ½Ğ°Ğ·Ğ²Ğ°Ğ½Ğ¸Ğµ ĞºÑƒÑ€ÑĞ¾Ğ²Ğ¾Ğ¹ ");
     scanf("%s",kursName);
     b=(Kurs *)malloc(sizeof(Kurs));
     strcpy(b->kursName,kursName);
-    printf("Ââåäèòå òåìó êóğñîâîé ");
+    printf("Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ñ‚ĞµĞ¼Ñƒ ĞºÑƒÑ€ÑĞ¾Ğ²Ğ¾Ğ¹ ");
     scanf("%s",b->kursTheme);
-    printf("Ââåäèòå îáüåì êóğñîâîé ");
+    printf("Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ¾Ğ±ÑŒĞµĞ¼ ĞºÑƒÑ€ÑĞ¾Ğ²Ğ¾Ğ¹ ");
     scanf("%d",&(b->capacity));
     b->std=(Stud *)malloc(sizeof(Stud));
-    printf("Ââåäèòå èìÿ ñòóäåíòà ");
+    printf("Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ¸Ğ¼Ñ ÑÑ‚ÑƒĞ´ĞµĞ½Ñ‚Ğ° ");
     scanf("%s",b->std->name);
-    printf("Ââåäèòå ôàìèëèş ñòóäåíòà ");
+    printf("Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ñ„Ğ°Ğ¼Ğ¸Ğ»Ğ¸Ñ ÑÑ‚ÑƒĞ´ĞµĞ½Ñ‚Ğ° ");
     scanf("%s",b->std->secName);
-    printf("Ââåäèòå øèôğ ãğóïû ñòóäåíòà ");
+    printf("Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ ÑˆĞ¸Ñ„Ñ€ Ğ³Ñ€ÑƒĞ¿Ñ‹ ÑÑ‚ÑƒĞ´ĞµĞ½Ñ‚Ğ° ");
     scanf("%s",b->std->group);
     int j=0;
     while(1){
@@ -49,16 +49,16 @@ int setKurs() {
         }
         j++;
         char sour[25];
-        printf("Ââåäèòå èñòî÷íèê èíôîğìàöèè ");
+        printf("Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ¸ÑÑ‚Ğ¾Ñ‡Ğ½Ğ¸Ğº Ğ¸Ğ½Ñ„Ğ¾Ñ€Ğ¼Ğ°Ñ†Ğ¸Ğ¸ ");
         scanf("%s",sour);
          if (sour[0]=='*') break;
          b->infrm=(Inf *)malloc(sizeof(Inf));
          strcpy(b->infrm->source, sour);
-         printf("Ââåäèòå èíôîğìàöèş \n\n");
+         printf("Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ¸Ğ½Ñ„Ğ¾Ñ€Ğ¼Ğ°Ñ†Ğ¸Ñ \n\n");
         scanf("%s",b->infrm->inf);
         b->infrm->nexti = NULL;
     }
-    printf("Èìÿ ñòóäåíòà %s", b->std->name);
+    printf("Ğ˜Ğ¼Ñ ÑÑ‚ÑƒĞ´ĞµĞ½Ñ‚Ğ° %s", b->std->name);
     if (ks==NULL) ks=b;
     return 0;
 }
@@ -69,3 +69,4 @@ int main()
     setKurs();
     return 0;
 }
+
