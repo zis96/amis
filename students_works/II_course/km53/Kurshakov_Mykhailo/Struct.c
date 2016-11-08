@@ -30,10 +30,10 @@ typedef struct lector{
 
 int main()
 {
-    STUDENT * student;
-    GROUP_S  * group;
-    LECTOR * lector;
-    AUTH * authorization;
+    STUDENT * student=NULL;
+    GROUP_S  * group=NULL;
+    LECTOR * lector=NULL;
+    AUTH * authorization=NULL;
 
     student=( STUDENT *)malloc(sizeof(STUDENT));
     group=( GROUP_S *)malloc(sizeof(GROUP_S));
