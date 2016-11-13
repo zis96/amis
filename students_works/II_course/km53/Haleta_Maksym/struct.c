@@ -9,6 +9,7 @@ struct Student
 	char surname[80];
 	char name[80];
 	char father_name[80];
+	char group[6];
 	student_status_type *student_status;           //  passed/not passed
 	unsigned short mark_quantity;                  //  0-100
 	char mark;                                     //  A, B, C, D, E
