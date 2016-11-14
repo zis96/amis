@@ -1,0 +1,51 @@
+# depslib dependency file v1.0
+1478554816 source:c:\users\bartw\yandexdisk\documents\kpi\“ – œ«\radio _kpi_\c project\main.c
+	<stdio.h>
+	<conio.h>
+	<string.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	<stdlib.h>
+
+1478617814 source:c:\users\bartw\yandexdisk\documents\kpi\“ – œ«\radio _kpi_\c project\input_playlist.c
+	<stdio.h>
+	<conio.h>
+	<string.h>
+	<stdlib.h>
+	"input_playlist.h"
+	"playlist_validation.h"
+	<stdbool.h>
+
+1478553819 c:\users\bartw\yandexdisk\documents\kpi\“ – œ«\radio _kpi_\c project\input_playlist.h
+
+1478618541 c:\users\bartw\yandexdisk\documents\kpi\“ – œ«\radio _kpi_\c project\playlist_validation.h
+
+1479072260 source:c:\users\bartw\documents\git\amis\students_works\ii_course\km52\kizim_yevhenii\c project\input_playlist.c
+	<stdio.h>
+	<conio.h>
+	<string.h>
+	<stdlib.h>
+	"input_playlist.h"
+	"playlist_validation.h"
+	<stdbool.h>
+
+1479071227 c:\users\bartw\documents\git\amis\students_works\ii_course\km52\kizim_yevhenii\c project\input_playlist.h
+
+1479072260 c:\users\bartw\documents\git\amis\students_works\ii_course\km52\kizim_yevhenii\c project\playlist_validation.h
+
+1479137012 source:c:\users\bartw\documents\git\amis\students_works\ii_course\km52\kizim_yevhenii\c project\main.c
+	<stdio.h>
+	<conio.h>
+	<string.h>
+	<stdlib.h>
+	"input_playlist.h"
+	"playlist_validation.h"
+
+1479137755 source:c:\users\bartw\documents\git\amis\students_works\ii_course\km52\kizim_yevhenii\c project\playlist_validation.c
+	<stdio.h>
+	<conio.h>
+	<string.h>
+	<stdlib.h>
+	"playlist_validation.h"
+
