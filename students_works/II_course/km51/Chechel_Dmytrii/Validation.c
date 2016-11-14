@@ -35,7 +35,7 @@ int setKursCapacity(){
 		fflush(stdin);
 		err = scanf("%d", &cap);
 		if((cap <0) || (cap > 1000)){
-             printf("Êîëè÷åñòâî ñòðàíèö âàøåé êóðñîâîé äîëæíî ëåæàòü â ïðåäåëàõ 0 - 1000\n");
+             printf("ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÑ‚Ñ€Ð°Ð½Ð¸Ñ† Ð²Ð°ÑˆÐµÐ¹ ÐºÑƒÑ€ÑÐ¾Ð²Ð¾Ð¹ Ð´Ð¾Ð»Ð¶Ð½Ð¾ Ð»ÐµÐ¶Ð°Ñ‚ÑŒ Ð² Ð¿Ñ€ÐµÐ´ÐµÐ»Ð°Ñ… 0 - 1000\n");
              err = 0;
         }
 		else{
@@ -55,7 +55,7 @@ char* setStudName(){
     int i;
     for(i=0;sname[i]!='\0';i++){
         if(strchr("1234567890", sname[i])){
-            printf("Íåâåðíûé ââîä èìåíè(ïðèñóòñòâóþò íå áóêâåííûå ñèìâîëû). Ïîïðîáóéòå ñíîâà: ");
+            printf("ÐÐµÐ²ÐµÑ€Ð½Ñ‹Ð¹ Ð²Ð²Ð¾Ð´ Ð¸Ð¼ÐµÐ½Ð¸(Ð¿Ñ€Ð¸ÑÑƒÑ‚ÑÑ‚Ð²ÑƒÑŽÑ‚ Ð½Ðµ Ð±ÑƒÐºÐ²ÐµÐ½Ð½Ñ‹Ðµ ÑÐ¸Ð¼Ð²Ð¾Ð»Ñ‹). ÐŸÐ¾Ð¿Ñ€Ð¾Ð±ÑƒÐ¹Ñ‚Ðµ ÑÐ½Ð¾Ð²Ð°: ");
            err=0;
             break;
         }else{
@@ -72,7 +72,7 @@ char* setStudSecName(){
     int i;
     for(i=0;secname[i]!='\0';i++){
         if(strchr("1234567890", secname[i])){
-            printf("Íåâåðíûé ââîä èìåíè(ïðèñóòñòâóþò íå áóêâåííûå ñèìâîëû). Ïîïðîáóéòå ñíîâà: ");
+            printf("ÐÐµÐ²ÐµÑ€Ð½Ñ‹Ð¹ Ð²Ð²Ð¾Ð´ Ð¸Ð¼ÐµÐ½Ð¸(Ð¿Ñ€Ð¸ÑÑƒÑ‚ÑÑ‚Ð²ÑƒÑŽÑ‚ Ð½Ðµ Ð±ÑƒÐºÐ²ÐµÐ½Ð½Ñ‹Ðµ ÑÐ¸Ð¼Ð²Ð¾Ð»Ñ‹). ÐŸÐ¾Ð¿Ñ€Ð¾Ð±ÑƒÐ¹Ñ‚Ðµ ÑÐ½Ð¾Ð²Ð°: ");
            err=0;
             break;
         }else{
@@ -98,40 +98,41 @@ char* setInf(){
 }
 
 void printStruct(Kurs* a){
-     printf("\n\nÍàçâàíèå êóðñîâîé %s\n", a->kursName);
-    printf("Òåìà êóðñîâîé %s\n", a->kursTheme);
-    printf("Êîëè÷åñòâî ñòàðíèö %d \n", a->capacity);
-    printf("Èìÿ ñòóäåíòà %s\n", a->std->name);
-    printf("Ôàìèëèÿ ñòóäåíòà %s\n", a->std->secName);
-    printf("Ãðóïà ñòóäåíòà %s\n", a->std->group);
-    printf("Èñòî÷íèê èíôîðìàöèè %s\n", a->infrm->source);
-    printf("Èíôîðìàöèÿ %s\n", a->infrm->inf);
+     printf("\n\nÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ ÐºÑƒÑ€ÑÐ¾Ð²Ð¾Ð¹ %s\n", a->kursName);
+    printf("Ð¢ÐµÐ¼Ð° ÐºÑƒÑ€ÑÐ¾Ð²Ð¾Ð¹ %s\n", a->kursTheme);
+    printf("ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÑ‚Ð°Ñ€Ð½Ð¸Ñ† %d \n", a->capacity);
+    printf("Ð˜Ð¼Ñ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð° %s\n", a->std->name);
+    printf("Ð¤Ð°Ð¼Ð¸Ð»Ð¸Ñ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð° %s\n", a->std->secName);
+    printf("Ð“Ñ€ÑƒÐ¿Ð° ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð° %s\n", a->std->group);
+    printf("Ð˜ÑÑ‚Ð¾Ñ‡Ð½Ð¸Ðº Ð¸Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸Ð¸ %s\n", a->infrm->source);
+    printf("Ð˜Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸Ñ %s\n", a->infrm->inf);
 }
 
 int main()
 {
      setlocale(LC_ALL, "Rus");
     Kurs* b=(Kurs *)malloc(sizeof(Kurs));
-    printf("Ââåäèòå íàçâàíèå êóðñîâîé ");
+    printf("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð°Ð·Ð²Ð°Ð½Ð¸Ðµ ÐºÑƒÑ€ÑÐ¾Ð²Ð¾Ð¹ ");
     strcpy(b->kursName, setKursName());
-    printf("Ââåäèòå òåìó êóðñîâîé ");
+    printf("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‚ÐµÐ¼Ñƒ ÐºÑƒÑ€ÑÐ¾Ð²Ð¾Ð¹ ");
     strcpy(b->kursTheme,setKursTheme());
-    printf("Ââåäèòå îáüåì êóðñîâîé ");
+    printf("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¾Ð±ÑŒÐµÐ¼ ÐºÑƒÑ€ÑÐ¾Ð²Ð¾Ð¹ ");
     b->capacity = setKursCapacity();
     b->std=(Stud *)malloc(sizeof(Stud));
-    printf("Ââåäèòå èìÿ ñòóäåíòà ");
+    printf("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð¼Ñ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð° ");
     strcpy(b->std->name, setStudName());
-    printf("Ââåäèòå ôàìèëèþ ñòóäåíòà ");
+    printf("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ„Ð°Ð¼Ð¸Ð»Ð¸ÑŽ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð° ");
     strcpy(b->std->secName, setStudSecName());
-    printf("Ââåäèòå øèôð ãðóïû ñòóäåíòà ");
+    printf("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑˆÐ¸Ñ„Ñ€ Ð³Ñ€ÑƒÐ¿Ñ‹ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð° ");
     strcpy(b->std->group, setStudGroup());
     b->infrm = (Inf *)malloc(sizeof(Inf));
-    printf("Ââåäèòå èñòî÷íèê èíôîðìàöèè ");
+    printf("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸ÑÑ‚Ð¾Ñ‡Ð½Ð¸Ðº Ð¸Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸Ð¸ ");
     strcpy(b->infrm->source, setInfSource());
-    printf("Ââåäèòå èíôîðìàöèþ ");
+    printf("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸ÑŽ ");
     strcpy(b->infrm->inf, setInf());
     printStruct(b);
 
 
     return 0;
 }
+
