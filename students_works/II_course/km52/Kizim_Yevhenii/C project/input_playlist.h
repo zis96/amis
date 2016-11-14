@@ -2,7 +2,7 @@
 #define INPUT_H_INCLUDED
 
 typedef struct playlist_info {
-    char* path;
+    char path[200];
     int songs_counter;
 } P_INFO;
 

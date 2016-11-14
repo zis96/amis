@@ -1,10 +1,10 @@
-#include "playlist_validation.h"
 #include <stdio.h>
 #include <conio.h>
 #include <string.h>
 #include <stdlib.h>
+#include "playlist_validation.h"
 
-int validate_playlist (char* playlist_path) {
+int validate_playlist (char playlist_path[200]) {
     FILE *playlist_file;
     char buff[200];
     int songs_counter=0;
@@ -14,7 +14,7 @@ int validate_playlist (char* playlist_path) {
     if (playlist_file==NULL)
         return 0;
 
-    while (!EOF) {
+    while (!feof(playlist_file)) {
         fgets(buff, 200, playlist_file);
         songs_counter++;
     }
