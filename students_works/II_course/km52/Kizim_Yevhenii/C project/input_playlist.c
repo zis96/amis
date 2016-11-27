@@ -8,45 +8,41 @@
 
 P_INFO* input_playlist() {
     P_INFO* user_playlist=malloc(sizeof(P_INFO));
-    char* temp_input=NULL;
-    int name_length=0;
-    bool input_finish=false;
-    user_playlist->path=malloc(sizeof(char)*(sizeof(".playlist")+1));
+    char buff [200]={0};
     //start input from keyboard
-    while (input_finish==false) {
-        *temp_input=getch();
-        switch (*temp_input) {
-        case 27:
-            if (name_length==0)
-                printf("\a");
-            else
-                input_finish=true;
-            break;
-        case '"':
-        case '|':
-        case '\\':
-        case '/':
-        case '*':
-        case ':':
-        case '?':
-        case '>':
-        case '<':
-            printf("\a");
-            break;
-        default:
-            name_length++;
-            user_playlist->path=realloc(user_playlist->path,sizeof(char)*(sizeof(".playlist"+name_length+1)));
-            strcat(user_playlist->path,temp_input);
-            printf("%s\r", user_playlist->path);
+    memset(user_playlist->path,0,sizeof(user_playlist->path));
+    strcpy(user_playlist->path,"playlists/");
+    char* prohibited="\"|\\/*:?<>";
+    while (true) {
+        printf("Enter name of playlist without extension:\n");
+        gets(buff);
+        if (strpbrk(prohibited,buff)!=NULL) {
+            printf("\aSymbols '\"','|','\\','/','*',':','?','>','<' are not allowed!\n");
+            printf("Press any key to try again");
+            getch();
+            system("cls");
         }
-    };
+        else{
+            if (strlen(buff)==0){
+                printf("\aEnter at least one symbol!\n");
+                printf("Press any key to try again");
+                getch();
+                system("cls");
+            }
+            else break;
+        }
+    }
+    strcat(user_playlist->path, buff);
     strcat(user_playlist->path,".playlist");
     //validating input
+    printf("\n%s", user_playlist->path);
     user_playlist->songs_counter = validate_playlist(user_playlist->path);
     if (user_playlist->songs_counter==0) {
         printf("\nPlaylist is empty or does not exist! \n");
         return NULL;
     }
-    else
+    else{
+        printf("\nThere are %d song(s) in current playlist.", user_playlist->songs_counter);
         return user_playlist;
+    }
 }
